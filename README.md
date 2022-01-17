@@ -20,7 +20,8 @@ important et correspond au image du code HTML
 
 Lorsque l'utilisateur va sur l'url : localhost:8080, il se trouve devant une page web
 lui demandant de choisir son animal préféré, il peux alors faire glisser les images pour choisir son
-animal préféré parmi la liste prédéfini suivante : lion, panda, aigle, chien, dauphin, chat et cheval
+animal préféré parmi la liste prédéfini suivante : lion, panda, aigle, chien, dauphin, chat et cheval.
+
 Une fois sur celui-ci on peut sauvegarder son choix en cliquant sur sauvegarder
 
 ![Screenshot](images/depart.png)
