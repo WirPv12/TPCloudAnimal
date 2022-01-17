@@ -1,0 +1,93 @@
+h1 {
+    font-size: 50px;
+    font-family: "StarWars font";
+    color: #35859A;
+    text-shadow: -4px -4px 0 #336470, -4px -2px 0 #336470, -4px 0 0 #336470, -4px 2px 0 #336470, -4px 4px 0 #336470, -2px -4px 0 #D5EFF6, -2px 4px 0 #D5EFF6, 0 -4px 0 #D5EFF6, 0 4px 0 #D5EFF6, 2px -4px 0 #D5EFF6, 2px -2px 0 #D5EFF6, 2px 0 0 #D5EFF6, 2px 4px 0 #D5EFF6, 4px -4px 0 #D5EFF6, 4px -2px 0 #D5EFF6, 4px 0 0 #D5EFF6, 4px 2px 0 #D5EFF6, 4px 4px 0 #D5EFF6;
+    align-content: center;
+    letter-spacing: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.displayCommand {
+    font-size: 30px;
+    text-shadow: -4px -4px 0 #336470, -2px -1px 0 #336470, -2px 0 0 #336470, -2px 1px 0 #336470, -2px 2px 0 #336470, -1px -2px 0 #D5EFF6, -1px 2px 0 #D5EFF6, 0 -2px 0 #D5EFF6, 0 2px 0 #D5EFF6, 1px -2px 0 #D5EFF6, 1px -1px 0 #D5EFF6, 1px 0 0 #D5EFF6, 1px 2px 0 #D5EFF6, 2px -2px 0 #D5EFF6, 2px -1px 0 #D5EFF6, 2px 0 0 #D5EFF6, 2px 1px 0 #D5EFF6, 2px 2px 0 #D5EFF6;
+}
+
+@font-face {
+	  font-family: "StarWars font";
+	  src: url('Starjedi.ttf');
+}
+
+body {
+    position: relative;
+    height: 100%;
+    background-color: #9BE1F4;
+}
+
+body {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    width: 479px;
+    height: 339px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 270px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+    filter: blur(2px);
+    padding-bottom: 60px;
+}
+
+.swiper-slide-active
+{
+    filter: blur(0px);
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #F9F9F9;
+}
+
+.saveConfig {
+    justify-content: center;
+    text-align: center;
+    display: block;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+    font-weight: bold;
+    width: 200px;
+    padding: 5px;
+    border-radius: 20px;
+    height: 55px;
+    border-width: 6px;
+    border-color: #D5EFF6;
+    background-color: #82E6E7;
+    color: #42A3A4;
+    background-clip: text;
+}
+
+
+
+.inputInvisible
+{
+    display: none;
+}

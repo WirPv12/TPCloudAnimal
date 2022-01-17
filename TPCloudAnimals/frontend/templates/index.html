@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Project Fav'Animal</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Déclaration de la variable globale afin de choisir un animal préféré-->
+    <script> 
+      var possibleAnimals = [];
+      var favoriteAnimal = "";
+    </script>
+    <script src='static/js/source.js' sync></script>
+    
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="static/styles/style.css">
+  </head>
+
+  <body>
+    <!-- Swiper -->
+    <section>
+      <h1>quel est votre animal préféré ?</h1>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="static/images/lion.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="static/images/panda.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="static/images/aigle.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="static/images/chien.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="static/images/dauphin.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="static/images/chat.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="static/images/cheval.jpg" />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <form method="post">
+      <div class="inputInvisible">
+        <input type="text" name="possibleAnimals" class="possibleAnimalsInput"> 
+        <input type="text" name="favoriteAnimal" class="favoriteAnimalInput">
+      </div>
+      <button type="submit" class="saveConfig">Sauvegarder</button>
+    </form>
+
+    <h1 class="displayCommand"></h1>
+
+    <!-- Swiper JS  -->
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+
+      let saveConfigButton = document.querySelector('.saveConfig');
+      saveConfigButton.onclick = function() {
+
+        favoriteAnimal = possibleAnimals[currentIndex];
+
+        let inputPossibleAnimals = document.querySelector('.possibleAnimalsInput');
+        inputPossibleAnimals.value = JSON.stringify(possibleAnimals);
+
+        let inputFavoriteAnimal = document.querySelector('.favoriteAnimalInput');
+        inputFavoriteAnimal.value = JSON.stringify(favoriteAnimal);
+      }   
+
+      var currentIndex = possibleAnimals.indexOf(favoriteAnimal);
+
+      let display = document.querySelector('.displayCommand');
+      if (possibleAnimals[currentIndex] != undefined){
+        display.innerHTML = possibleAnimals[currentIndex];
+      }
+      else {
+        display.innerHTML = "None affected";
+      }
+
+      var swiper = new Swiper(".mySwiper", {
+        effect: "flip",
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
+        },
+        on: {
+          slideChange: function () {
+            const index_currentSlide = swiper.activeIndex;
+            currentIndex = index_currentSlide;
+            display.innerHTML = possibleAnimals[currentIndex];
+          },
+        },
+      });
+
+      swiper.activeIndex = currentIndex;
+    </script>
+  </body>
+</html>
