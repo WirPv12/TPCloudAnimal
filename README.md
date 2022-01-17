@@ -1,5 +1,7 @@
 # TPCloudAnimal
 
+Développé par Quentin Colras
+
 ## Lancement
 
 Les étapes : 
