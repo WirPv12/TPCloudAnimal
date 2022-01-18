@@ -1,7 +1,7 @@
 import json
 import os
 
-path = "frontend/static/js/config.json"
+path = "/var/lib/TPCloudAnimals/config.json"
         
 def save_config(listeAnimals, favorite):
     try:
